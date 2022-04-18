@@ -42,6 +42,12 @@ public class Test {
 					break;
 				case 3:
 					System.out.println("记账系统》》》》登记支出");
+					System.out.println("请录入支出金额");
+					int expend = sc.nextInt();
+					System.out.println("请录入支出说明");
+					String expendDetail = sc.next();
+					balance -= expend;
+					details = details + "支出: "+expend+",支出说明"+ expendDetail+",账户余额："+balance+"\n";
 					break;
 				case 4:
 					System.out.println("记账系统》》》》退出功能");
