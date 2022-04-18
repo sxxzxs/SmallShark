@@ -38,7 +38,7 @@ public class Test {
 					System.out.println("请录入收入说明: ");
 					String incomeDetail = sc.next();
 					balance += income;
-					details =details +"收入: "+ income+",收入说明: "+incomeDetail+",账户余额: "+ balance+"\n";
+					details =details +"收入:  "+ income+",收入说明: "+incomeDetail+",账户余额: "+ balance+"\n";
 					break;
 				case 3:
 					System.out.println("记账系统》》》》登记支出");
@@ -47,11 +47,18 @@ public class Test {
 					System.out.println("请录入支出说明");
 					String expendDetail = sc.next();
 					balance -= expend;
-					details = details + "支出: "+expend+",支出说明"+ expendDetail+",账户余额："+balance+"\n";
+					details = details + "支出:  "+expend+",支出说明: "+ expendDetail+",账户余额："+balance+"\n";
 					break;
 				case 4:
 					System.out.println("记账系统》》》》退出功能");
-					return;
+					System.out.println("确定要退出吗？ Y/N: ");
+					String isExit = sc.next();
+					switch(isExit) {
+						case "Y":
+							System.out.println("系统退出，欢迎您下次继续使用");
+						return;
+					}
+					
 			}
 		}
 	}
